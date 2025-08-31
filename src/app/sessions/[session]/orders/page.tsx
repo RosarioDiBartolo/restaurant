@@ -11,7 +11,7 @@ async function OrdersPage({
   const session = await getSessionById(sessionId);
   return (
     session && (
-      <main className="bg-secondary text-secondary-foreground flex-1">
+      <main className="   text-secondary-foreground flex-1">
         <Orders session={session} />{" "}
       </main>
     )

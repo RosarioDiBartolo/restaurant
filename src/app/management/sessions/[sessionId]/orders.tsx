@@ -270,7 +270,12 @@ const OrderItemView = ({
               {options.map(([k, v]) => (
                 <li key={k} className=" flex justify-between">
                   <span className=" font-bold"> {k} </span>
-                  <Badge className=" border border-card-foreground   bg-accent text-accent-foreground   px-3  text-md  font-semibold">
+                  <Badge className={cn(
+                    " border border-card-foreground   text-accent-foreground   px-3  text-md  font-semibold",
+                    order.status === "in attesa" && " bg-background text-foreground",
+                    order.status === "in preparazione" && "bg-accent text-accent-foreground",
+                    order.status === "consegnato" && "bg-secondary text-secondary-foreground"
+                  )}>
                     {v}
                   </Badge>
                 </li>

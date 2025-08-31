@@ -13,8 +13,7 @@ import {
 import { Button } from "@/components/ui/button"; 
  import { toast } from "sonner"; 
 import { addOrder } from "@/app/client/session";
-import QuantityEditor from "@/components/quantity-editor";
- 
+  
 interface SelectedOptions {
   [key: string]: OptionValue;
 }
@@ -28,8 +27,7 @@ function ProductOverview({
   category: string;
    sessionId: string;
 }) {
-  const [Quantity, setQuantity] = useState(1);
-  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>(
+   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>(
     () => {
       if (!productItem.options) return {};
       const initial: SelectedOptions = {};
@@ -53,14 +51,14 @@ function ProductOverview({
       await addOrder(  sessionId, {
         productName: productItem.name,
         category: category,
-        quantity: Quantity,
+        quantity: 1,
         options: Object.fromEntries(
           Object.entries(selectedOptions).map(([k, v]) => [k, v.name])
         ),
       });
 
       toast("Ordine aggiunto", {
-        description: `${Quantity}x ${productItem.name} è stato aggiunto al carrello.`,
+        description: `${productItem.name} è stato aggiunto al carrello.`,
       });
     } catch (err) {
       toast("Errore", {
@@ -83,10 +81,7 @@ function ProductOverview({
         height={300}
         alt={productItem.name}
       />
-
-      <div className="my-5 mx-auto w-fit gap-2 items-center flex">
-        <QuantityEditor quantity={Quantity} setQuantity={setQuantity} />
-      </div>
+ 
 
       {productItem.options &&
         Object.entries(productItem.options).map(([option, values]) => (
@@ -127,11 +122,10 @@ function ProductOverview({
     
       <SheetClose asChild>
         <Button size={"lg"} type="submit"    className=" font-bold w-full">
-          Aggiungi {Quantity} agli ordini -{" "}
-          {new Intl.NumberFormat("it-IT", {
+           {new Intl.NumberFormat("it-IT", {
             style: "currency",
             currency: "EUR",
-          }).format(finalPrice * Quantity)}
+          }).format(finalPrice  )}
         </Button>
       </SheetClose>
     </form>

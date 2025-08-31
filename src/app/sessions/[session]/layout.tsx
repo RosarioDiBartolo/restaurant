@@ -21,8 +21,8 @@ export default async function SessionLayout({
   }
   return (
     <html lang="it">
-      <body className="bg-pattern     ">
-        <div className="min-h-svh flex flex-col "> 
+      <body className="       ">
+          <div className="min-h-svh bg-pattern flex flex-col "> 
              <Header session={session} />
             {children}
             </div>

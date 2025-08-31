@@ -9,7 +9,7 @@ export async function addOrder(
 ) {
   const newOrder = {
     ...newOrderProps,
-    status: "in preparazione",
+    status: "in attesa",
    }
 
    return  await updateDoc( doc(collection(db, "sessions"), sessionId),  { orders: arrayUnion(newOrder)}  );
