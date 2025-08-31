@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { db } from "@/lib/firebase-client";
 import { cn } from "@/lib/utils";
-import { doc, getDoc, onSnapshot } from "firebase/firestore";
+import { doc,  onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 export default function OrdersBadge({ initalOrdersCount, className, sessionId }: { className? :string;  sessionId: string , initalOrdersCount: number}) {

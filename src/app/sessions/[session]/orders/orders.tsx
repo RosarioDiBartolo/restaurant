@@ -1,4 +1,4 @@
-import { OrderItem as OrderItemType, TableSession } from "@/lib/types";
+import { OrderItem as OrderItemType  } from "@/lib/types";
 import OrderItem from "./order-item";
 import { Button } from "@/components/ui/button";
 import { Product, products } from "@/lib/products";

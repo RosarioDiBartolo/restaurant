@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { addDoc, collection, deleteDoc, doc, DocumentData, onSnapshot, query, QueryConstraint, QueryDocumentSnapshot, updateDoc } from "firebase/firestore";
+import {   collection,   doc, DocumentData, onSnapshot, query, QueryConstraint, QueryDocumentSnapshot,   } from "firebase/firestore";
 import { db } from "@/lib/firebase-client";
 
 // Wrapper per ogni documento

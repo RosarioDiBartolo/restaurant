@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import {   Table, TableSession } from "@/lib/types";
+import {   Table  } from "@/lib/types";
 
 import { findOrdersFinalPrice } from "@/lib/sessions";
 import Link from "next/link";
