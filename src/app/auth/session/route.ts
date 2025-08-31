@@ -1,5 +1,4 @@
 // app/auth/session/route.ts
-"use server";
 import { adminAuth } from "@/lib/firebase-admin";
 import { NextResponse } from "next/server";
 
