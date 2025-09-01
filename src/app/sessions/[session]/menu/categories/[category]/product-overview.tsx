@@ -73,8 +73,7 @@ function ProductOverview({
     <form 
     action={handleAddOrder}
     className="px-5 ">
- 
-      <Image
+       <Image
         className="mx-auto   rounded-3xl shadow-xl shadow-foreground/50"
         src={productItem.thumbnail ?? "https://picsum.photos/500/300"}
         width={500}
@@ -121,8 +120,8 @@ function ProductOverview({
         ))}
     
       <SheetClose asChild>
-        <Button size={"lg"} type="submit"    className=" font-bold w-full">
-           {new Intl.NumberFormat("it-IT", {
+        <Button size={"lg"} type="submit"    className=" my-5 font-bold w-full">
+           Prezzo: {new Intl.NumberFormat("it-IT", {
             style: "currency",
             currency: "EUR",
           }).format(finalPrice  )}

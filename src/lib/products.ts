@@ -6,7 +6,10 @@ import TavolaCaldaThumbnail from "@/assets/tavola-calda.jpg";
 import PrimiThumbnail from "@/assets/primi-piatti.jpg";
 import DrinksThumbnail from "@/assets/drinks.jpg";
 import RedbullThumbnail from "@/assets/redbull.webp";
-import PizzaThumbnail from "@/assets/pizza.jpg";
+import NormaThumbnail from "@/assets/pasta-norma.jpeg";
+import LasagnaThumbnail from "@/assets/lasagna.jpg";
+import VongoleThumbnail from "@/assets/pasta-vongole.jpg";
+
 import PaniniThumbnail from "@/assets/panini.jpg";
 import InsalateThumbnail from "@/assets/insalate.jpg";
 import InsalataGrecaThumbnail from "@/assets/insalata-greca.jpg";
@@ -123,25 +126,24 @@ export const products: Record<string, Product[]> = {
   primi: [
     {
       name: "Pasta alla norma",
+      thumbnail: NormaThumbnail,
       description:
         "Tradizionale piatto siciliano con melanzane e ricotta salata.",
       price: 3.5,
     },
     {
       name: "Lasagna",
+      thumbnail: LasagnaThumbnail,
       description: "Lasagna al forno con ragù e besciamella.",
       price: 3.5,
     },
     {
       name: "Spaghetti alle vongole",
+      thumbnail: VongoleThumbnail,
       description: "Spaghetti con vongole fresche e prezzemolo.",
       price: 5,
     },
-    {
-      name: "Risotto ai funghi",
-      description: "Riso cremoso con funghi porcini.",
-      price: 4.5,
-    },
+    
   ],
 
   dessert: [

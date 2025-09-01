@@ -15,7 +15,7 @@ export default async function ManagementLayout({
     <AuthProvider>
       <LoginRedirect> 
       <html lang="it">
-        <body className="  flex min-h-screen flex-col pb-12  ">
+        <body className="  flex min-h-screen flex-col  ">
           <SidebarProvider
             style={
               {

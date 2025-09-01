@@ -28,7 +28,7 @@ export function ProductItem({
           key={productItem.name}
           className=" block p-1 active:scale-90 active:opacity-75 transition-all duration-300 rounded-2xl shadow-xl bg-gradient-to-bl from-amber-50 via-amber-50 to-amber-200 overflow-hidden"
         >
-          <div className="p-5 rounded-2xl bg-gradient-to-l from-background to-background/60 flex productItems-center justify-between gap-4">
+          <div className="p-5 rounded-2xl bg-gradient-to-l from-background to-background/60 flex product items-center justify-between gap-4">
             {/* Thumbnail */}
             <div className="flex-shrink-0 w-20 h-20 relative rounded-xl overflow-hidden shadow-md">
               {productItem.thumbnail && (
