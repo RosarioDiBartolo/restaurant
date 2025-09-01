@@ -1,19 +1,19 @@
 import React, { PropsWithChildren } from "react";
 import AuthProvider from "./auth-provider";
-import { getSession } from "@/lib/auth/employe-session";
-import { redirect } from "next/navigation";
+ 
 
 import { AppSidebar } from "@/components/app-sidebar";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import LoginRedirect from "./login-redirect";
 
 export default async function ManagementLayout({
   children,
 }: PropsWithChildren) {
-  const AuthSession = await getSession();
-  if (!AuthSession) redirect("/auth/login");
+ 
   return (
     <AuthProvider>
+      <LoginRedirect> 
       <html lang="it">
         <body className="  flex min-h-screen flex-col pb-12  ">
           <SidebarProvider
@@ -29,6 +29,7 @@ export default async function ManagementLayout({
           </SidebarProvider>
         </body>
       </html>
+      </LoginRedirect>
     </AuthProvider>
   );
 }

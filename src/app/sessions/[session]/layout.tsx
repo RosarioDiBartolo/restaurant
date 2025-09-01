@@ -4,7 +4,8 @@ import Header from "./header";
 import { ReactNode } from "react";
 import Footer from "@/app/sessions/[session]/footer";
 import { getSessionById } from "@/app/actions/collections/sessions";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { getTable } from "@/app/actions/collections/tables";
 
 export default async function SessionLayout({
   params,
@@ -18,6 +19,12 @@ export default async function SessionLayout({
   const session = await getSessionById(sessionId);
   if (!session){
     return notFound();
+  }
+
+  const table = await getTable(session.table)
+  if (!table?.open){
+      redirect(`/error?table=${session.table.toString()}`)
+
   }
   return (
     <html lang="it">
