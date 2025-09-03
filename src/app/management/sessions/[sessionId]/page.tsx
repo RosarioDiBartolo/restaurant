@@ -16,8 +16,7 @@ async function Table({params}:{
 
     const session = await getSessionById(sessionId)
     const table = session &&  await getTable( session?.table)
-    console.log({table})
-    if ( !table?.open){
+     if ( !table?.open){
       redirect("/management")
     }
   return (

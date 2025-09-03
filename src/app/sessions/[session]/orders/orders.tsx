@@ -1,18 +1,11 @@
 import { OrderItem as OrderItemType  } from "@/lib/types";
 import OrderItem from "./order-item";
 import { Button } from "@/components/ui/button";
-import { Product, products } from "@/lib/products";
+import { Product  } from "@/lib/products";
+import { getproduct } from "@/lib/sessions";
 
 
-const getproduct = (name: string, category: string)=>{
-  const product = products[category.toLowerCase()]?.find(p=>p.name === name)
  
-  if (!product){
-        throw `Strange product found in an order...  Name: ${name} Category: ${category} `;
-   }
-
-   return product
-}
 
 const findFinalPrice = (o: OrderItemType & {product: Product})=>o.quantity *(  (o.product.price + Object.entries( o.options ).map( ([k, v])=>  {
 

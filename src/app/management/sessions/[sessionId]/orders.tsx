@@ -211,7 +211,7 @@ const EditOrder = ({
             <SheetClose asChild>
               <Button
                 onClick={() => {
-                  console.log("Editing order", order);
+                  
                   editOrderAction(order);
                 }}
                 className=" w-full "

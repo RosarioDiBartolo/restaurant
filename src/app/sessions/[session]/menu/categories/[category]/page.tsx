@@ -12,12 +12,13 @@ type CategoryPageProps = {
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category: categoryParam , session: sessionId} = await params;
   const decodedCategory = decodeURIComponent(categoryParam)
-   const session = await getSessionById(sessionId)
+
+    const session = await getSessionById(sessionId)
 
   const category = categories.find(
     (c) => c.name  === decodedCategory
   );
-    console.log(category)
+   console.log({category})
 
   if (!category) {
     return notFound();
@@ -35,7 +36,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <Toaster />
         <ul className="p-5 flex flex-col gap-3  ">
           {productItems.map((item) => (
-            <ProductItem session ={session} category={categoryParam} key={item.name} productItem={item} />
+            <ProductItem session ={session} category={category.name} key={item.name} productItem={item} />
           ))}
         </ul>
         

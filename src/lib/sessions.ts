@@ -1,13 +1,17 @@
 
-import { Product, products } from "./products"
+import { Product, products, categories } from "./products"
 import { OrderItem as OrderItemType  } from "./types"
 
 
 export const getproduct = (name: string, category: string)=>{
+  const ExistingCategory = categories.find( c=> c.name === category)
+if (!ExistingCategory){
+        throw `Strange category found in an order...   Category: ${category} `;
+   }
     const product = products[category.toLowerCase()]?.find(p=>p.name === name)
  
   if (!product){
-        throw `Strange product found in an order...  Name: ${name} Category: ${category} `;
+        throw `Strange product found in the "${category}" category... Name: ${name}`;
    }
 
    return product
