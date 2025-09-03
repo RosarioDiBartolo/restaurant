@@ -170,16 +170,7 @@ export const products: Record<string, Product[]> = {
         Panna: opzioniPanna,
       },
     },
-    {
-      name: "Tiramisù",
-      description: "Classico dolce italiano con mascarpone e caffè.",
-      price: 4,
-    },
-    {
-      name: "Cannolo Siciliano",
-      description: "Cialda croccante ripiena di ricotta dolce.",
-      price: 3.5,
-    },
+    
   ],
 
   "tavola calda": [

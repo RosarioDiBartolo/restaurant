@@ -13,7 +13,7 @@ export default async function ManagementLayout({
  
   return (
     <AuthProvider>
-      <LoginRedirect> 
+      {/* <LoginRedirect>  */}
       <html lang="it">
         <body className="  flex min-h-screen flex-col  ">
           <SidebarProvider
@@ -29,7 +29,7 @@ export default async function ManagementLayout({
           </SidebarProvider>
         </body>
       </html>
-      </LoginRedirect>
+      {/* </LoginRedirect> */}
     </AuthProvider>
   );
 }
