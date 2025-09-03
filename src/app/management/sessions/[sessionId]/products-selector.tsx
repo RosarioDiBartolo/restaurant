@@ -26,7 +26,7 @@ function ProductsSelector( {session}: {session:TableSession}) {
                 onClick={()=>{
                   sessionsCollection.updateDoc(session.id, {
                     orders: [...session.orders, {
-                      productName: product.name, category: c, options: product.options ? Object.fromEntries( Object.entries( product.options ).map(([opt, values])=> [opt, values[0].name] ) ): {} , status: "in attesa", quantity: 1
+                      productName: product.name, category: c , options: product.options ? Object.fromEntries( Object.entries( product.options ).map(([opt, values])=> [opt, values[0].name] ) ): {} , status: "in attesa", quantity: 1
                     } ]
                   })
 

@@ -59,7 +59,7 @@ export function ProductItem({
 
       <SheetContent
         side="right"
-        className=" h-screen flex flex-col w-full sm:w-[600px] py-8 pb-12 max-w-full overflow-y-auto"
+        className="  flex flex-col w-full sm:w-[600px] py-8 pb-12 max-w-full overflow-y-auto"
       >
         <SheetHeader className="  ">
           <SheetTitle className="font-bold text-3xl">
